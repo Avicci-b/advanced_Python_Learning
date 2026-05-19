@@ -1,20 +1,26 @@
-class Animal:
-    is_breathing = True
-
-    def __init__(self, name, age):
-        self.name=name
-        self.age=age
+import unittest
+class Area:
+    def __init__(self,height,width):
+        self.height=height
+        self.width=width
 
     def __str__(self):
-        return f"The animal's name is {self.name} and it is {self.age} years young"
+        return f"this is the height {self.height} and the width is {self.width}"
+
+    def get_Area(self):
+        return self.width * self.height
     
-    def animal_Sound(self, sound):
-        return f"weeee"
-    
-class Dog(Animal):
-    def animal_Sound(self, sound):
-        return f"iiiii"
-d1=Dog("Mathew",5)
-print(d1.animal_Sound("Helolo"))
-a1=Animal("Rabbit",3)
-print(a1.animal_Sound("Elolo"))
+    def set_Width(self,width):
+        self.width=width
+
+    def set_Height(self,height):
+        self.height=height
+
+class GetArea(unittest.TestCase):
+    def test_area(self):
+        area1=Area(3,3)
+        self.assertEqual(area1.get_Area(),9,"Incorrect area")
+unittest.main()
+
+
+
