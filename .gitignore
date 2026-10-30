@@ -1,5 +1,7 @@
 /venv
 advanced_Python_Learning.code-workspace
 /__pycache__
+web_applications/__pycache__
+
 /data
 /unit_Testing/__pycache__
